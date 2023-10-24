@@ -63,6 +63,11 @@
                 <span class="badge rounded-pill bg-light text-dark text-wrap"> AC </span>
                 <span class="badge rounded-pill bg-light text-dark text-wrap"> Room heater </span>
               </div>
+              <div class="guests mb-4">
+                <h6 class="mb-1">Guests</h6>
+                <span class="badge rounded-pill bg-light text-dark text-wrap"> 5 Adults </span>
+                <span class="badge rounded-pill bg-light text-dark text-wrap"> 4 Children </span>
+              </div>
               <div class="rating mb-4">
                 <h6 class="mb-1">Rating</h6>
                 <span class="badge rounded-pill bg-light">
