@@ -22,9 +22,9 @@ export const useMainStore = defineStore('main', {
       rooms: [],
       room: {},
       qrcode: '',
+      customer: {},
     };
   },
-  getters: {},
   actions: {
     async register(form) {
       try {
@@ -77,6 +77,7 @@ export const useMainStore = defineStore('main', {
       try {
         localStorage.clear();
         this.access_token = null;
+        this.$router.push({ name: 'home' });
         Toast.fire({
           icon: 'success',
           title: 'Logged out successfully',
@@ -95,7 +96,7 @@ export const useMainStore = defineStore('main', {
             access_token: localStorage.access_token,
           },
         });
-        // console.log(data);
+
         this.rooms = data;
       } catch (error) {
         console.error(error);
@@ -120,10 +121,69 @@ export const useMainStore = defineStore('main', {
             access_token: localStorage.access_token,
           },
         });
-        // console.log(data);
+
         this.room = data.room;
         this.qrcode = data.qr;
         Swal.close();
+      } catch (error) {
+        console.error(error);
+      }
+    },
+
+    async fetchDataCustomer() {
+      try {
+        const { data } = await axios({
+          method: 'get',
+          url: baseUrl + '/customers',
+          headers: {
+            access_token: localStorage.access_token,
+          },
+        });
+
+        this.customer = data;
+      } catch (error) {
+        console.error(error);
+      }
+    },
+
+    async changeStatusPayment(bookingId) {
+      try {
+        await axios({
+          method: 'patch',
+          url: baseUrl + `/bookings/${bookingId}`,
+          headers: {
+            access_token: localStorage.access_token,
+          },
+        });
+
+        this.$router.push({ name: 'home' });
+        Toast.fire({
+          icon: 'success',
+          title: 'Your payment is successful',
+        });
+      } catch (error) {
+        console.error(error);
+      }
+    },
+
+    async generateMidtrans(formData) {
+      try {
+        const { data } = await axios({
+          method: 'post',
+          url: baseUrl + '/generate-midtrans-token',
+          headers: {
+            access_token: localStorage.access_token,
+          },
+          data: formData,
+        });
+
+        const cb = this.changeStatusPayment;
+        snap.pay(data.midtransToken.token, {
+          onSuccess: function (result) {
+            console.log(result);
+            cb(data.bookingId);
+          },
+        });
       } catch (error) {
         console.error(error);
       }

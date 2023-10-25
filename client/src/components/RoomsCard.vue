@@ -42,7 +42,14 @@ import { useMainStore } from '../stores/main';
 export default {
   props: ['room'],
   methods: {
-    clickBook() {},
+    clickBook() {
+      this.$router.push({
+        name: 'booking',
+        params: {
+          id: this.room.id,
+        },
+      });
+    },
     clickDetail() {
       this.$router.push({
         name: 'detailRoom',

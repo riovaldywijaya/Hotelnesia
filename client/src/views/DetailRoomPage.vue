@@ -44,7 +44,7 @@
             >
             /room/night
           </div>
-          <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Book Now</a>
+          <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2" @click.prevent="clickBook">Book Now</a>
         </div>
         <div class="col-4 mt-3" v-html="qrcode"></div>
       </div>
@@ -66,6 +66,14 @@ export default {
   },
   methods: {
     ...mapActions(useMainStore, ['fetchDetailRoom']),
+    clickBook() {
+      this.$router.push({
+        name: 'booking',
+        params: {
+          id: this.room.id,
+        },
+      });
+    },
   },
   computed: {
     ...mapState(useMainStore, ['room', 'qrcode']),
