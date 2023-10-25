@@ -25,9 +25,9 @@
             </li> -->
           </ul>
           <div class="d-flex" role="search">
-            <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
-            <button type="button" class="btn btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
-            <button type="button" class="btn btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#registerModal">Logout</button>
+            <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginModal" v-if="!isLogin">Login</button>
+            <button type="button" class="btn btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#registerModal" v-if="!isLogin">Register</button>
+            <button type="button" class="btn btn-outline-dark shadow-none" v-if="isLogin" @click.prevent="clickLogout">Logout</button>
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@
 </template>
 
 <script>
-import { mapActions } from 'pinia';
+import { mapActions, mapState } from 'pinia';
 import { useMainStore } from '../stores/main';
 export default {
   data() {
@@ -153,11 +153,22 @@ export default {
     };
   },
   methods: {
-    ...mapActions(useMainStore, ['register']),
+    ...mapActions(useMainStore, ['register', 'login', 'logout']),
     submitRegister() {
       this.register(this.formRegister);
     },
-    submitLogin() {},
+    submitLogin() {
+      this.login(this.formLogin);
+    },
+    clickLogout() {
+      this.logout();
+    },
+  },
+  computed: {
+    ...mapState(useMainStore, ['access_token']),
+    isLogin() {
+      return this.access_token ? true : false;
+    },
   },
 };
 </script>

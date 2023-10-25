@@ -62,6 +62,15 @@ export default {
     Navbar,
     Footerr,
   },
+  methods: {
+    ...mapActions(useMainStore, ['fetchDetailRoom']),
+  },
+  computed: {
+    ...mapState(useMainStore, ['room', 'qrcode']),
+  },
+  created() {
+    this.fetchDetailRoom(this.$route.params.id);
+  },
 };
 </script>
 
