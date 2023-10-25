@@ -99,7 +99,7 @@
         </div>
       </div>
     </div>
-    <div style="padding-left: 800px">
+    <div style="padding-left: 900px">
       <nav aria-label="...">
         <ul class="pagination">
           <li>

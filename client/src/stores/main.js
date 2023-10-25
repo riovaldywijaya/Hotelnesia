@@ -20,6 +20,8 @@ export const useMainStore = defineStore('main', {
     return {
       access_token: localStorage.access_token,
       rooms: [],
+      room: {},
+      qrcode: '',
     };
   },
   getters: {},
@@ -93,15 +95,35 @@ export const useMainStore = defineStore('main', {
             access_token: localStorage.access_token,
           },
         });
-        console.log(data);
+        // console.log(data);
         this.rooms = data;
       } catch (error) {
         console.error(error);
       }
     },
 
-    async fetchDetailRoom() {
+    async fetchDetailRoom(roomId) {
       try {
+        Swal.fire({
+          title: 'Uploading...',
+          html: 'Please wait...',
+          allowEscapeKey: false,
+          allowOutsideClick: false,
+          didOpen: () => {
+            Swal.showLoading();
+          },
+        });
+        const { data } = await axios({
+          method: 'get',
+          url: baseUrl + `/rooms/${roomId}`,
+          headers: {
+            access_token: localStorage.access_token,
+          },
+        });
+        // console.log(data);
+        this.room = data.room;
+        this.qrcode = data.qr;
+        Swal.close();
       } catch (error) {
         console.error(error);
       }
