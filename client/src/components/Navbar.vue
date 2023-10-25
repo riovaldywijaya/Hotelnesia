@@ -27,15 +27,17 @@
           <div class="d-flex" role="search">
             <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
             <button type="button" class="btn btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+            <button type="button" class="btn btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#registerModal">Logout</button>
           </div>
         </div>
       </div>
     </nav>
 
+    <!-- LOGIN -->
     <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <form>
+          <form @submit.prevent="submitLogin">
             <div class="modal-header">
               <h5 class="modal-title d-flex align-items-center"><i class="bi bi-person-circle fs-3 me-2"></i> User Login</h5>
               <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -43,29 +45,30 @@
             <div class="modal-body">
               <div class="mb-3">
                 <label class="form-label">Email address</label>
-                <input type="email" class="form-control shadow-none" />
+                <input type="email" class="form-control shadow-none" v-model="formLogin.email" />
               </div>
               <div class="mb-4">
                 <label class="form-label">Password</label>
-                <input type="password" class="form-control shadow-none" />
+                <input type="password" class="form-control shadow-none" v-model="formLogin.password" />
               </div>
               <div class="d-flex align-items-center justify-content-between mb-2">
-                <button type="submit" class="btn btn-dark shadow-none">LOGIN</button>
-                <a href="" class="text-secondary text-decoration-none">Forgot Password?</a>
+                <button type="submit" class="btn btn-dark shadow-none">Login</button>
+                <!-- <a href="" class="text-secondary text-decoration-none">Forgot Password?</a> -->
               </div>
             </div>
           </form>
         </div>
       </div>
     </div>
+
+    <!-- REGISTER -->
     <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
-          <form enctype="multipart/form-data">
+          <form enctype="multipart/form-data" @submit.prevent="submitRegister">
             <div class="modal-header">
               <h5 class="modal-title d-flex align-items-center">
                 <i class="bi bi-person-lines-fill"></i>
-
                 User Registration
               </h5>
               <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -76,44 +79,44 @@
                 <div class="row">
                   <div class="col-md-6 ps-0 mb-3">
                     <label class="form-label">Name</label>
-                    <input type="text" class="form-control shadow-none" />
+                    <input type="text" class="form-control shadow-none" v-model="formRegister.name" />
                   </div>
                   <div class="col-md-6 p-0 mb-3">
                     <label class="form-label">Email</label>
-                    <input type="email" class="form-control shadow-none" />
+                    <input type="email" class="form-control shadow-none" v-model="formRegister.email" />
                   </div>
                   <div class="col-md-6 ps-0 mb-3">
                     <label class="form-label">Phone Number</label>
-                    <input type="number" class="form-control shadow-none" />
+                    <input type="number" class="form-control shadow-none" v-model="formRegister.phoneNumber" />
                   </div>
                   <div class="col-md-6 p-0 mb-3">
                     <label class="form-label">Picture</label>
-                    <input type="file" class="form-control shadow-none" name="profilePicture" />
+                    <input type="file" class="form-control shadow-none" name="profilePicture" @change="onFileChange" />
                   </div>
                   <div class="col-md-12 p-0 mb-3">
                     <label class="form-label">Address</label>
-                    <textarea class="form-control shadow-none" rows="1"></textarea>
+                    <textarea class="form-control shadow-none" rows="1" v-model="formRegister.address"></textarea>
                   </div>
-                  <div class="col-md-6 ps-0 mb-3">
+                  <!-- <div class="col-md-6 ps-0 mb-3">
                     <label class="form-label">Pincode</label>
                     <input type="number" class="form-control shadow-none" />
-                  </div>
+                  </div> -->
                   <div class="col-md-6 p-0 mb-3">
                     <label class="form-label">Date of birth</label>
-                    <input type="date" class="form-control shadow-none" />
+                    <input type="date" class="form-control shadow-none" v-model="formRegister.dateOfBirth" />
                   </div>
                   <div class="col-md-6 ps-0 mb-3">
                     <label class="form-label">Password</label>
-                    <input type="password" class="form-control shadow-none" />
+                    <input type="password" class="form-control shadow-none" v-model="formRegister.password" />
                   </div>
-                  <div class="col-md-6 p-0 mb-3">
+                  <!-- <div class="col-md-6 p-0 mb-3">
                     <label class="form-label">Confirm password</label>
                     <input type="password" class="form-control shadow-none" />
-                  </div>
+                  </div> -->
                 </div>
               </div>
               <div class="text-center my-1">
-                <button type="submit" class="btn btn-dark shadow-none">REGISTER</button>
+                <button type="submit" class="btn btn-dark shadow-none">Register</button>
               </div>
             </div>
           </form>
@@ -124,7 +127,39 @@
 </template>
 
 <script>
-export default {};
+import { mapActions } from 'pinia';
+import { useMainStore } from '../stores/main';
+export default {
+  data() {
+    return {
+      formLogin: {
+        email: '',
+        password: '',
+      },
+      formRegister: {
+        name: '',
+        email: '',
+        phoneNumber: null,
+        profilePicture: null,
+        address: '',
+        dateOfBirth: '',
+        password: '',
+      },
+      onFileChange(e) {
+        let files = e.target.files || e.dataTransfer.files;
+        if (!files.length) return;
+        this.formRegister.profilePicture = files[0];
+      },
+    };
+  },
+  methods: {
+    ...mapActions(useMainStore, ['register']),
+    submitRegister() {
+      this.register(this.formRegister);
+    },
+    submitLogin() {},
+  },
+};
 </script>
 
 <style></style>
