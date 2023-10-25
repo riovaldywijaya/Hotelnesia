@@ -102,11 +102,11 @@
     <div style="padding-left: 900px">
       <nav aria-label="...">
         <ul class="pagination">
-          <li>
-            <a class="page-link" href="#" @click="handlePaginationFilter(-1)">Previous</a>
+          <li :class="[page.number <= 1 ? `page-item disabled` : `page-item`]">
+            <a class="page-link" style="color: #2e44c1" href="#" @click="handlePaginationFilter(-1)">Previous</a>
           </li>
           <li class="page-item">
-            <a class="page-link" href="#" @click="handlePaginationFilter(1)">Next</a>
+            <a class="page-link" style="color: #2e44c1" href="#" @click="handlePaginationFilter(1)">Next</a>
           </li>
         </ul>
       </nav>
@@ -127,11 +127,24 @@ export default {
     Footerr,
     RoomsCard,
   },
+  data() {
+    return {
+      page: {
+        size: 5,
+        number: 1,
+      },
+    };
+  },
   methods: {
-    ...mapActions(useMainStore, ['fetchDataRooms']),
+    ...mapActions(useMainStore, ['fetchDataRooms', 'changeFormatRupiah']),
+    handlePaginationFilter(direction) {
+      this.page.number += direction;
+      this.page.size = 5;
+      this.fetchDataRooms({ page: this.page });
+    },
   },
   created() {
-    this.fetchDataRooms();
+    this.fetchDataRooms({ page: this.page });
   },
   computed: {
     ...mapState(useMainStore, ['rooms']),

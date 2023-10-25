@@ -25,7 +25,18 @@ export const useMainStore = defineStore('main', {
       customer: {},
     };
   },
+  getters: {},
   actions: {
+    changeFormatRupiah(value) {
+      const formatter = new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 0,
+      });
+
+      return formatter.format(value);
+    },
+
     async register(form) {
       try {
         const formData = new FormData();
@@ -87,11 +98,14 @@ export const useMainStore = defineStore('main', {
       }
     },
 
-    async fetchDataRooms() {
+    async fetchDataRooms(object) {
       try {
         const { data } = await axios({
           method: 'get',
           url: baseUrl + '/rooms',
+          params: {
+            page: object.page,
+          },
           headers: {
             access_token: localStorage.access_token,
           },

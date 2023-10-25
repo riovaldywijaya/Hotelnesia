@@ -23,3 +23,12 @@ input[type='number'] {
   background-color: #203088;
   border-color: #203088;
 }
+
+.custom-bg-back {
+  background-color: #b4b4b4;
+  border: 1px solid #b4b4b4;
+}
+.custom-bg-back:hover {
+  background-color: #979797;
+  border-color: #979797;
+}

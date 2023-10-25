@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 mt-4">
-          <img :src="room.imageUrl" class="img-fluid rounded" />
+          <img :src="room.imageUrl" class="img-fluid rounded mx-auto d-block" />
         </div>
       </div>
       <div class="row rounded mt-5" style="background-color: white">
@@ -40,11 +40,12 @@
             <h6 class="mb-4" style="font-size: 13px"></h6>
             Start from
             <span>
-              <h2>{{ room.price }}</h2></span
-            >
+              <h2 style="color: #2e44c1">{{ changeFormatRupiah(room.price) }}</h2>
+            </span>
             /room/night
           </div>
           <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2" @click.prevent="clickBook">Book Now</a>
+          <a href="#" class="btn btn-sm w-100 text-white custom-bg-back shadow-none mb-2" @click.prevent="$router.go(-1)">Go Back</a>
         </div>
         <div class="col-4 mt-3" v-html="qrcode"></div>
       </div>
@@ -65,7 +66,7 @@ export default {
     Footerr,
   },
   methods: {
-    ...mapActions(useMainStore, ['fetchDetailRoom']),
+    ...mapActions(useMainStore, ['fetchDetailRoom', 'changeFormatRupiah']),
     clickBook() {
       this.$router.push({
         name: 'booking',

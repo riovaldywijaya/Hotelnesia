@@ -27,7 +27,10 @@
         </div>
       </div>
       <div class="col-md-2 text-center">
-        <h6 class="mb-4">Rp.{{ room.price }} per night</h6>
+        <h6 class="mb-4">
+          <span style="color: #2e44c1; font-size: 18px">{{ changeFormatRupiah(room.price) }}</span>
+          per night
+        </h6>
 
         <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2" @click.prevent="clickBook">Book Now</a>
         <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none" @click.prevent="clickDetail">More details</a>
@@ -42,6 +45,7 @@ import { useMainStore } from '../stores/main';
 export default {
   props: ['room'],
   methods: {
+    ...mapActions(useMainStore, ['changeFormatRupiah']),
     clickBook() {
       this.$router.push({
         name: 'booking',

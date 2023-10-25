@@ -39,11 +39,11 @@
             </div>
             <div class="mb-3">
               <label class="form-label">Total Price</label>
-              <input type="text" disabled class="form-control" :value="countTotalPrice" />
+              <input type="text" disabled class="form-control" :value="changeFormatRupiah(countTotalPrice)" />
             </div>
 
             <button type="submit" class="btn w-100 text-white custom-bg shadow-none mb-2">Submit</button>
-            <button type="submit" class="btn btn-danger w-100 text-white shadow-none">Cancel</button>
+            <button type="submit" class="btn custom-bg-back w-100 text-white shadow-none" @click.prevent="$router.go(-1)">Cancel</button>
           </form>
         </div>
         <div class="col-lg-3"></div>
@@ -93,7 +93,7 @@ export default {
     },
   },
   methods: {
-    ...mapActions(useMainStore, ['fetchDetailRoom', 'fetchDataCustomer', 'generateMidtrans']),
+    ...mapActions(useMainStore, ['fetchDetailRoom', 'fetchDataCustomer', 'generateMidtrans', 'changeFormatRupiah']),
     submitBook() {
       this.generateMidtrans({
         RoomId: this.room.id,

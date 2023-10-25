@@ -24,9 +24,9 @@
           <img src="../assets/images/facilities/waterHeater.svg" width="80px" />
           <h5 class="mt-3">Water Heater</h5>
         </div>
-        <div class="col-lg-12 text-center mt-5">
+        <!-- <div class="col-lg-12 text-center mt-5">
           <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">More Facilities >>></a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
