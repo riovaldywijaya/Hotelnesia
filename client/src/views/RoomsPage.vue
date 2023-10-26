@@ -20,9 +20,9 @@
                 <div class="border bg-light p-3 rounded mb-3">
                   <h5 class="mb-3" style="font-size: 18px">CHECK AVAILABILITY</h5>
                   <label class="form-label">Check-in</label>
-                  <input type="date" class="form-control shadow-none mb-3" />
+                  <input type="date" class="form-control shadow-none mb-3" disabled />
                   <label class="form-label">Check-out</label>
-                  <input type="date" class="form-control shadow-none" />
+                  <input type="date" class="form-control shadow-none" disabled />
                 </div>
                 <div class="border bg-light p-3 rounded mb-3">
                   <h5 class="mb-3" style="font-size: 18px">FACILITIES</h5>
