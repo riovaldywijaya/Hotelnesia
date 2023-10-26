@@ -18,7 +18,7 @@
             <h5>Call us</h5>
             <a href="tel : +6282123456789" class="d-inline-block mb-2 text-decoration-none text-dark"> <i class="bi bi-telephone-fill"></i> +6282123456789 </a>
             <br />
-            <a href="tel : +6282123456789" class="d-inline-block text-decoration-none text-dark"> <i class="bi bi-telephone-fill"></i> +6282123456789 </a>
+            <a href="tel : +6282123456789" class="d-inline-block text-decoration-none text-dark"> <i class="bi bi-telephone-fill"></i> +6282629436289 </a>
           </div>
           <div class="bg-white p-4 rounded mb-4">
             <h5>Follow us</h5>

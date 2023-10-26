@@ -12,9 +12,9 @@
           <h5 class="mb-3">Links</h5>
           <RouterLink to="/" href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Home</RouterLink> <br />
           <RouterLink to="/rooms" href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Rooms</RouterLink> <br />
-          <!-- <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Facilities</a> <br />
-          <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Contact us</a> <br />
-          <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">About</a> -->
+          <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none nav-link disabled">Facilities</a> <br />
+          <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none nav-link disabled">Contact us</a> <br />
+          <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none nav-link disabled">About</a>
         </div>
         <div class="col-lg-4 p-4">
           <h5 class="mb-3">Follow us</h5>

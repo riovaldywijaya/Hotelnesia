@@ -18,22 +18,25 @@
           </div>
           <div class="features mb-3">
             <h5 class="mb-1">Features</h5>
-            <span class="badge rounded-pill bg-light text-dark text-wrap"> 2 Rooms </span>
+
+            <span class="badge rounded-pill bg-light text-dark text-wrap" v-for="feature in splitFeatures" :key="feature.id"> {{ feature }} </span>
+            <!-- <span class="badge rounded-pill bg-light text-dark text-wrap"> 2 Rooms </span>
             <span class="badge rounded-pill bg-light text-dark text-wrap"> 1 Bathroom </span>
             <span class="badge rounded-pill bg-light text-dark text-wrap"> 1 Balcony </span>
-            <span class="badge rounded-pill bg-light text-dark text-wrap"> 3 Sofa </span>
+            <span class="badge rounded-pill bg-light text-dark text-wrap"> 3 Sofa </span> -->
           </div>
           <div class="facilities mb-3">
             <h5 class="mb-1">Facilities</h5>
-            <span class="badge rounded-pill bg-light text-dark text-wrap"> Wifi </span>
+            <span class="badge rounded-pill bg-light text-dark text-wrap" v-for="facility in splitFacilities" :key="facility.id"> {{ facility }} </span>
+            <!-- <span class="badge rounded-pill bg-light text-dark text-wrap"> Wifi </span>
             <span class="badge rounded-pill bg-light text-dark text-wrap"> Television </span>
             <span class="badge rounded-pill bg-light text-dark text-wrap"> AC </span>
-            <span class="badge rounded-pill bg-light text-dark text-wrap"> Room heater </span>
+            <span class="badge rounded-pill bg-light text-dark text-wrap"> Room heater </span> -->
           </div>
           <div class="guests mb-3">
             <h5 class="mb-1">Guests</h5>
-            <span class="badge rounded-pill bg-light text-dark text-wrap"> 5 Adults </span>
-            <span class="badge rounded-pill bg-light text-dark text-wrap"> 4 Children </span>
+            <span class="badge rounded-pill bg-light text-dark text-wrap"> {{ room.adult }} Adults </span>
+            <span class="badge rounded-pill bg-light text-dark text-wrap"> {{ room.children }} Children </span>
           </div>
           <div class="col-md-2 mb-3">
             <h5 class="mb-1 mb-1">Price</h5>
@@ -78,6 +81,12 @@ export default {
   },
   computed: {
     ...mapState(useMainStore, ['room', 'qrcode']),
+    splitFeatures() {
+      return this.room.features.split(',');
+    },
+    splitFacilities() {
+      return this.room.facilities.split(',');
+    },
   },
   created() {
     this.fetchDetailRoom(this.$route.params.id);

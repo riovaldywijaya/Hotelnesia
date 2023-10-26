@@ -14,15 +14,15 @@
             <li class="nav-item">
               <RouterLink to="/rooms" class="nav-link me-2" href="#">Rooms</RouterLink>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link me-2" href="#">Facilities</a>
+            <li class="nav-item">
+              <a class="nav-link me-2 disabled" href="#">Facilities</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link me-2" href="#">Contact Us</a>
+              <a class="nav-link me-2 disabled" href="#">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li> -->
+              <a class="nav-link disabled" href="#">About</a>
+            </li>
           </ul>
           <div class="d-flex" role="search">
             <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginModal" v-if="!isLogin">Login</button>

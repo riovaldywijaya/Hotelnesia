@@ -21,8 +21,15 @@ export const useMainStore = defineStore('main', {
       access_token: localStorage.access_token,
       rooms: [],
       room: {},
+      roomHome: [],
       qrcode: '',
       customer: {},
+      filter: {
+        checkinDate: '',
+        checkoutDate: '',
+        adult: '',
+        children: '',
+      },
     };
   },
   getters: {},
@@ -100,11 +107,13 @@ export const useMainStore = defineStore('main', {
 
     async fetchDataRooms(object) {
       try {
+        console.log(object);
         const { data } = await axios({
           method: 'get',
           url: baseUrl + '/rooms',
           params: {
             page: object.page,
+            filter: this.filter,
           },
           headers: {
             access_token: localStorage.access_token,
@@ -112,6 +121,29 @@ export const useMainStore = defineStore('main', {
         });
 
         this.rooms = data;
+        // this.$router.push({ name: 'rooms' });
+      } catch (error) {
+        console.error(error);
+      }
+    },
+
+    async fetchDataRoomsHome(object) {
+      try {
+        console.log(object);
+        const { data } = await axios({
+          method: 'get',
+          url: baseUrl + '/rooms',
+          params: {
+            page: object.page,
+            filter: object.filter,
+          },
+          headers: {
+            access_token: localStorage.access_token,
+          },
+        });
+
+        this.roomsHome = data;
+        this.$router.push({ name: 'rooms' });
       } catch (error) {
         console.error(error);
       }
