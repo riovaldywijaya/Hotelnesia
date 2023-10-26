@@ -14,7 +14,8 @@ const Toast = Swal.mixin({
   },
 });
 
-const baseUrl = 'http://localhost:3000';
+// const baseUrl = 'http://localhost:3000';
+const baseUrl = 'https://career-portal-server.riovaldywijaya.xyz';
 export const useMainStore = defineStore('main', {
   state() {
     return {
