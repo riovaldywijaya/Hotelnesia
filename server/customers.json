@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Riovaldy Wijaya",
+    "email": "customer1@mail.com",
+    "password": "customer1",
+    "phoneNumber": "082123456789",
+    "profilePicture": "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "address": "Jl. Soekarno Hatta, Bandung",
+    "dateOfBirth": "2001-06-10"
+  }
+]

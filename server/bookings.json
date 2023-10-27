@@ -1,0 +1,29 @@
+[
+  {
+    "CustomerId": 1,
+    "RoomId": 1,
+    "bookingDate": "2023-10-24",
+    "checkinDate": "2023-10-25",
+    "checkoutDate": "2023-10-28",
+    "totalPayment": 1000000,
+    "statusPayment": "pending"
+  },
+  {
+    "CustomerId": 1,
+    "RoomId": 2,
+    "bookingDate": "2023-10-24",
+    "checkinDate": "2023-11-10",
+    "checkoutDate": "2023-11-13",
+    "totalPayment": 2000000,
+    "statusPayment": "pending"
+  },
+  {
+    "CustomerId": 1,
+    "RoomId": 3,
+    "bookingDate": "2023-10-24",
+    "checkinDate": "2023-10-26",
+    "checkoutDate": "2023-10-29",
+    "totalPayment": 3000000,
+    "statusPayment": "pending"
+  }
+]

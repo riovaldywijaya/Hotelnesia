@@ -1,0 +1,134 @@
+[
+  {
+    "name": "King Deluxe Room",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!",
+    "price": 1000000,
+    "adult": 4,
+    "children": 2,
+    "imageUrl": "https://www.hilton.com/im/en/BDOHIHI/16713120/queen-deluxe-room-1-low2.jpg?impolicy=crop&cw=5000&ch=2604&gravity=NorthWest&xposition=0&yposition=364&rw=768&rh=400",
+    "availability": true,
+    "features": "3 Bathroom, 1 Balcony, 3 Sofa",
+    "facilities": "Wifi,AC, Water heater"
+  },
+  {
+    "name": "King Premium Room",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!",
+    "price": 2000000,
+    "adult": 2,
+    "children": 2,
+    "imageUrl": "https://www.hilton.com/im/en/BDOHIHI/3120184/-g2a9195-queen-executive.jpg?impolicy=crop&cw=5000&ch=2604&gravity=NorthWest&xposition=0&yposition=283&rw=768&rh=400",
+    "availability": true,
+    "features": "1 Bathroom, 2 Sofa",
+    "facilities": "Wifi, Television, AC, Water heater"
+  },
+  {
+    "name": "King Executive Room",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!",
+    "price": 3000000,
+    "adult": 2,
+    "children": 1,
+    "imageUrl": "https://www.hilton.com/im/en/BDOHIHI/1058211/g2a9415-king-executive-plus-med-res.jpg?impolicy=crop&cw=6688&ch=3483&gravity=NorthWest&xposition=0&yposition=139&rw=768&rh=400",
+    "availability": true,
+    "features": "2 Bathroom, 1 Balcony, 2 Sofa",
+    "facilities": "Wifi, AC, Water heater"
+  },
+  {
+    "name": "King Presidential Suite",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!",
+    "price": 5000000,
+    "adult": 3,
+    "children": 2,
+    "imageUrl": "https://www.hilton.com/im/en/BDOHIHI/5336352/bdohihi-king-executive.jpg?impolicy=crop&cw=6724&ch=3502&gravity=NorthWest&xposition=0&yposition=574&rw=768&rh=400",
+    "availability": true,
+    "features": "1 Bathroom, 1 Balcony, 3 Sofa",
+    "facilities": "Wifi, AC, Water heater"
+  },
+  {
+    "name": "King Junior Suite",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!",
+    "price": 4000000,
+    "adult": 2,
+    "children": 2,
+    "imageUrl": "https://www.hilton.com/im/en/BDOHIHI/3114778/g2a8920-king-deluxe.jpg?impolicy=crop&cw=6688&ch=3483&gravity=NorthWest&xposition=0&yposition=487&rw=768&rh=400",
+    "availability": true,
+    "features": "1 Bathroom, 1 Balcony, 1 Sofa",
+    "facilities": "Wifi, Television, AC, Water heater"
+  },
+  {
+    "name": "2 Queen Deluxe Room",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!",
+    "price": 1000000,
+    "adult": 2,
+    "children": 2,
+    "imageUrl": "https://www.hilton.com/im/en/BDOHIHI/3127809/g2a8970a-king-deluxe.jpg?impolicy=crop&cw=6144&ch=3200&gravity=NorthWest&xposition=0&yposition=572&rw=768&rh=400",
+    "availability": true,
+    "features": "1 Bathroom, 1 Balcony, 1 Sofa",
+    "facilities": "Wifi, Television, AC, Water heater"
+  },
+  {
+    "name": "2 Queen Premium Room",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!",
+    "price": 2000000,
+    "adult": 2,
+    "children": 2,
+    "imageUrl": "https://www.hilton.com/im/en/BDOHIHI/3120184/-g2a9195-queen-executive.jpg?impolicy=crop&cw=5000&ch=2604&gravity=NorthWest&xposition=0&yposition=283&rw=768&rh=400",
+    "availability": true,
+    "features": "1 Bathroom, 1 Balcony, 1 Sofa",
+    "facilities": "Wifi, Television, AC, Water heater"
+  },
+  {
+    "name": "Premier Room",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!",
+    "price": 2500000,
+    "adult": 3,
+    "children": 2,
+    "imageUrl": "https://www.thetranshotel.com/images/editor/images/3%284%29.jpg",
+    "availability": true,
+    "features": "1 Bathroom, 1 Balcony, 2 Sofa",
+    "facilities": "Wifi, Television, AC, Water heater"
+  },
+  {
+    "name": "Celebrity Room",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!",
+    "price": 3500000,
+    "adult": 2,
+    "children": 2,
+    "imageUrl": "https://www.thetranshotel.com/images/editor/images/6%285%29.jpg",
+    "availability": true,
+    "features": "2 Bathroom, 1 Balcony, 3 Sofa",
+    "facilities": "Wifi, Television, AC, Water heater"
+  },
+  {
+    "name": "Presidential Room",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!",
+    "price": 3500000,
+    "adult": 2,
+    "children": 2,
+    "imageUrl": "https://www.thetranshotel.com/images/editor/images/6%285%29.jpg",
+    "availability": true,
+    "features": "2 Bathroom, 1 Balcony, 3 Sofa",
+    "facilities": "Wifi, Television, AC, Water heater"
+  },
+  {
+    "name": "Club Room",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!",
+    "price": 2400000,
+    "adult": 2,
+    "children": 2,
+    "imageUrl": "https://www.hilton.com/im/en/BDOHIHI/3127809/g2a8970a-king-deluxe.jpg?impolicy=crop&cw=6144&ch=3200&gravity=NorthWest&xposition=0&yposition=572&rw=768&rh=400",
+    "availability": true,
+    "features": "2 Bathroom, 1 Balcony, 2 Sofa",
+    "facilities": "Wifi, Television, AC, Water heater"
+  },
+  {
+    "name": "Junior Suite Garden Room",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aspernatur quisquam repellendus perferendis maiores eum adipisci quasi obcaecati blanditiis expedita eius pariatur quae asperiores dolores distinctio, provident, dicta, voluptatem minima!",
+    "price": 1300000,
+    "adult": 2,
+    "children": 2,
+    "imageUrl": "https://www.hilton.com/im/en/BDOHIHI/3087339/-g2a9267-king-executive.jpg?impolicy=crop&cw=5000&ch=2604&gravity=NorthWest&xposition=0&yposition=272&rw=768&rh=400",
+    "availability": true,
+    "features": "1 Bathroom, 1 Balcony, 3 Sofa",
+    "facilities": "Wifi, Television, AC, Water heater"
+  }
+]
